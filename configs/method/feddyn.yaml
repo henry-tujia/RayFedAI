@@ -1,0 +1,18 @@
+method_name: feddyn
+
+hyperparams:
+  mu: 0.1
+  max_grad_norm: 0.5
+
+# #model parameters
+model_init_params:
+  #for resnet
+  KD: false
+  projection: false
+  #for vim
+  pretrained: null
+  #for MLP
+  #for resnet_for_merge
+  depth: 22
+  widen_factor: 2
+  dropout_rate: 0

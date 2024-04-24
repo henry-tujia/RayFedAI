@@ -73,7 +73,7 @@ class Client(Base_Client):
                     logits /= self.hypers.temp
                     labels = torch.zeros(x.size(0)).to(self.device).long()
 
-                    loss2 = self.hypers.mu * self.criterion(logits, labels)
+                    loss2 = self.args.method.hyperparams * self.criterion(logits, labels)
 
                     loss1 = self.criterion(out, target)
                     loss = loss1 + loss2
